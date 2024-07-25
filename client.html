@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Websocket Bytes</title>
+</head>
+<body>
+    <h1>👾 Websocket Bytes 👾</h1>
+    <div id="wrapper">
+        <div id="machine-container">
+            <div>
+                <input placeholder="Enter bytes in hexidecimal or alphanumeric" id="bytez" type="text">
+            </div>
+            <div id="controls">
+                <div>
+                    <button class="control-button" disabled="true" id="send-bytes" onclick="send()">Send data 🚀</button>
+                    <button class="control-button" id="reconnect" onclick="reconnect()">Reconnect 🔄</button>
+                    <span id="status" class="not-connected pulse"></span>
+                </div>
+                <div>
+                    <br />
+                    <button class="type-button control-button" onclick="setByteType(8)" disabled="true">8</button>
+                    <button class="type-button control-button" onclick="setByteType(16)">16</button>
+                    <button class="type-button control-button" onclick="setByteType(32)">32</button>
+                    <button class="type-button control-button" onclick="setByteType('f32')">f32</button>
+                    <button class="type-button control-button" onclick="setByteType('f64')">f64</button>
+                </div>
+            </div>
+            <br />
+            <div id="console">
+                
+                <p id="last-message-received">Hello! No message received yet.</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+<script src="./index.js"></script>
+
+</html>

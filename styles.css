@@ -1,0 +1,125 @@
+body {
+    background-color: #0B3954;
+    ;
+}
+
+h1,
+h2,
+h3 {
+    color: #FEFFFE;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 0rem;
+}
+
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#machine-container {
+    box-shadow: 0px 1px 2.8px #0c6599;
+    padding: 0.4rem;
+    border-radius: 9px;
+}
+
+#bytez {
+    background-color: #BFD7EA;
+    padding: 0.9rem;
+    width: 390px;
+    margin-bottom: 0.3rem;
+    font-size: 20px;
+    border-radius: 7px;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+#bytez:placeholder-shown {
+    font-size: 15px;
+}
+
+#last-message-received {
+    color: #E0FF4F;
+    word-break: break-word;
+}
+
+#status {
+    /* font-size: 24.6px; */
+    margin-left: 1rem;
+    display: inline-block;
+    width: 24.6px;
+    height: 24.6px;
+    border-radius: 12px;
+
+}
+
+#status.connected {
+    background-color: #00d26a;
+    box-shadow: 0px 0px 15px green;
+    
+}
+
+#status.sending {
+    animation: pulse 0.1s ease-in-out;
+    animation-iteration-count: infinite;
+}
+/* Nico's Confirmation Number: FG38-7149450 */
+
+#status.not-connected {
+    background-color: #d20000;
+    box-shadow: 0px 0px 15px red;
+}
+
+.pulse {
+    animation: pulse infinite;
+}
+
+.control-button {
+    font-weight: 600;
+    background-color: #FF6663;
+    color: #FEFFFE;
+    padding: 0.5rem;
+    font-size: 24.6px;
+    border-radius: 7px;
+}
+.type-button {
+    font-size: 18px;
+    min-width: 40.67px;
+}
+
+.control-button:disabled {
+    color: #fefffe36;
+    background-color: #0B3954;
+}
+
+#console {
+    background-color: black;
+    color: #E0FF4F;
+    font-family: monospace;
+    width: 400px;
+    min-height: 200px;
+    border: 0.5px white solid;
+    padding: 1rem;
+    font-size: 18px;
+    border-radius: 7px;
+}
+
+@keyframes pulse {
+   0% {
+        box-shadow: 0px 0px 15px 1px green;
+   }
+
+   100% {
+    box-shadow: 0px 0px 5px 2px green;
+   }
+
+   0% {
+    box-shadow: 0px 0px 15px 1px green;
+}
+
+}
